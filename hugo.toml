@@ -2,6 +2,7 @@ baseURL = 'https://wonjongbot.com/'
 languageCode = 'en-us'
 title = 'wonjongbot'
 theme = 'hugo-theme-console'
+pygmentsStyle = "manni" #"native"manni
 
 [params]
   # Cutting off the page title to two chars for mobile (console-demo -> co)
