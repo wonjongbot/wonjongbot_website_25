@@ -1,4 +1,4 @@
-baseURL = 'https://wonjongbot.github.io/wonjongbot_website_25'
+baseURL = 'https://wonjongbot.github.io/wonjongbot_website_25/'
 languageCode = 'en-us'
 title = 'wonjongbot'
 theme = 'hugo-theme-console'
