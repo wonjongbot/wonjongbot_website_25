@@ -2,7 +2,7 @@ baseURL = 'https://wonjongbot.com/'
 languageCode = 'en-us'
 title = 'wonjongbot'
 theme = 'hugo-theme-console'
-pygmentsStyle = "manni" #"native"manni
+pygmentsStyle = "manni" #"native"
 
 [params]
   # Cutting off the page title to two chars for mobile (console-demo -> co)
@@ -11,6 +11,10 @@ pygmentsStyle = "manni" #"native"manni
   # Set the animation style -- https://animate.style/
   # To disable animations, please remove or comment animationStyle parameter
   animateStyle = "animated zoomIn fast" 
+
+  [[params.navlinks]]
+  name = "home/"
+  url = "/"
 
   # [[params.navlinks]]
   # name = "about/"
