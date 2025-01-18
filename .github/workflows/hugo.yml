@@ -3,7 +3,7 @@ name: Deploy Hugo Website to GitHub Pages
 on:
   push:
     branches:
-      - main  # Replace with your source branch if different
+      - main  # Replace with your default branch if different
 
 jobs:
   build:
@@ -18,12 +18,13 @@ jobs:
         with:
           hugo-version: 'latest'
 
-      - name: Setup GitHub Pages
+      - name: Build Site
+        run: hugo --minify
+
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
-
-      - name: Build Site
-        run: hugo --minify
+# test
