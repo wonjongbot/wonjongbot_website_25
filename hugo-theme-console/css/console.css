@@ -330,7 +330,7 @@ figure {
 }
   
 #image-preview {
-    width: 150px; /* The width of the image box */
+    width: 250px; /* The width of the image box */
     border: 1px solid #ddd;
     background-color: #fff;
     z-index: 9999; /* Ensures it floats above everything */
@@ -391,4 +391,11 @@ figure {
     #intro-text {
         text-align: center;
     }
+}
+
+.links{
+    display: flex;
+    gap: 10px; /* Adjust spacing between links */
+    margin: -10px 0px;
+    padding:0px 0px 10px 0px;
 }
