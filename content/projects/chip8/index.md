@@ -1,10 +1,11 @@
 +++
 image = "chip8.jpg"
-date = "2023-01-02"
-draft = true
+date = "2022-07-02"
+draft = false
 title = 'chip8'
 type = "post"
+github = "https://github.com/wonjongbot/CHIP-8"
 +++
 
-8-bit toy cpu simulator in c++.
+8-bit cpu simulator in c++.
 <!--more-->

@@ -1,9 +1,10 @@
 +++
 image = "tagebuilder.png"
 date = "2025-01-04"
-draft = true
+draft = false
 title = 'tageBuilder'
-type = "gallery"
+type = "post"
+github = 'https://github.com/wonjongbot/tageBuilder'
 +++
-Perf evaluation on tage like branch predictor made easy.
+Perf evaluation on TAGE like branch predictor made easy.
 <!--more-->

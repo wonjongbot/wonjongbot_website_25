@@ -1,10 +1,12 @@
 +++
 image = "scdfight_small.gif"
-date = "2025-01-01"
-draft = true
+date = "2022-11-15"
+draft = false
 title = 'Arcade game core on FPGA'
-type = "gallery"
+type = "post"
+github = 'https://github.com/wonjongbot/StarCraft-Dogfight-SoC'
+demo = 'https://youtu.be/uepAv-EOpGw?si=4zYYmHreWtNYOQfy'
 +++
 
-Multiplayer arcade game designed in logic/hardware level.
+Multiplayer arcade game hardware designed on an FPGA.
 <!--more-->
