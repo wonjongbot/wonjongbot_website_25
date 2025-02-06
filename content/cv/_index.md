@@ -2,4 +2,4 @@
 title = "CV"
 type = "post"
 +++
-{{< embed-pdf "PeterLee_CV.pdf" >}}
+{{< embed-pdf "PeterLee_resume.pdf" >}}
