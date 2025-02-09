@@ -213,6 +213,8 @@ One key requirement is **VRAM separation** to ensure that processes running do n
 
 Since a **processes cannot directly print to the display**, the kernel manages **five individual VRAM pages** (see [Physical Memory Layout](#physical-memory-layout)). When switching processes, the **kernel remaps the video memory pages** to ensure that respective processes only write to their own VRAM page.
 
+#### Handling Active Process Switching
+
 When a **background process is switched to the active one**, the kernel **copies the corresponding VRAM buffer to the display** and **remaps the vidmap** to reflect the new active process.
 
 ---
