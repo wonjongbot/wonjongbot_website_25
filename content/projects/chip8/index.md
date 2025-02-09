@@ -31,7 +31,7 @@ A takeaway from this project:
     uint8_t x = (opcode & 0x0F00u) >> 8u;
     ```
 
-![Tetris on my CHIP-8 emulator](https://raw.githubusercontent.com/wonjongbot/CHIP-8/master/images/tetris.png)
+{{< add-img "https://raw.githubusercontent.com/wonjongbot/CHIP-8/master/images/tetris.png" "100%" >}}
 
 ## Usage
 
