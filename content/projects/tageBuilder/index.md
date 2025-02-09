@@ -14,12 +14,13 @@ _Python-based sim/eval tool for TAGE-like branch predictors._
 tageBuilder is a Python-based simulator and performance evaluation tool for TAGE-like branch predictors. It offers configurable parameters for modeling TAGE predictors and is optimized for performance with Numba and NumPy. Predictor performance can be evaluated with 200+ branch trace datasets from the 2016 Championship Branch Prediction (CBP2016) environment and generates detailed performance metrics.
 
 > TAGE predictors are state-of-the-art branch predictor design. If you are curious about their details, check out [resources](#resources).
+
 ## Features
 
 - **Customizable Predictor Model:**  
   Configure aspects such as tagged components (number, history length, tag width) and base predictor settings (prediction bits, hysteresis bits) via a YAML spec file.
 
-> The tool does not model non-tagged components (except for the base predictor) such as the loop predictor and the statistical corrector.
+  _The tool does not model non-tagged components (except for the base predictor) such as the loop predictor and the statistical corrector._
 
   A predictor with 12 tagged components with total space of 212Kb scored accuracy of 95%> and MPKI of 1~3 for most traces.
 
@@ -40,7 +41,7 @@ tageBuilder is a Python-based simulator and performance evaluation tool for TAGE
   
 ## Technical Details
 
-> currently adding more details
+_currently adding more details_
  
 ### Configuration
 
@@ -99,7 +100,7 @@ The tool accepts branch trace files in the BT9 format, compatible with the CBP20
 
 ### Output
 
-> check `tageBuilder/docs/example_sim_output.tar.gz` for output example.
+_check `tageBuilder/docs/example_sim_output.tar.gz` for output example._
 
 TAGEbuilder produces several outputs:
 - Visualizations for memory usage by predictor components
@@ -120,12 +121,11 @@ TAGEbuilder produces several outputs:
 - CSV files summarizing simulation results (per predictor, per branch PC address, general MPKI/accuracy)
 
 ## Performance & Benchmarks
-
-> currently adding more details
+_currently adding more details_
 
 ## Things Learned
 
-> currently adding more details
+_currently adding more details_
 
 ## Applications
 
