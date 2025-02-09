@@ -3,7 +3,7 @@ image = "os_small.gif"
 date = "2023-04-15"
 draft = false
 title = 'Unix like kernel'
-type = "gallery"
+type = "post"
 github = 'https://github.com/wonjongbot/391OS'
 +++
 ECE 391 final MP. Unix like kernel w/ vmem, syscall, multithreading and more.
@@ -11,6 +11,8 @@ ECE 391 final MP. Unix like kernel w/ vmem, syscall, multithreading and more.
 <!--more-->
 ---
 
+<!-- ![os_gif](os_large.gif) -->
+{{< add-img "os_large.gif" "512px" >}}
 ## Technical Overview
 
 Contents
