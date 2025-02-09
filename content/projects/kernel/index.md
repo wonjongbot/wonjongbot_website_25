@@ -9,10 +9,9 @@ github = 'https://github.com/wonjongbot/391OS'
 ECE 391 final MP. Unix like kernel w/ vmem, syscall, multithreading and more.
 
 <!--more-->
+---
 
 ## Technical Overview
-
-- - -
 
 Contents
 
