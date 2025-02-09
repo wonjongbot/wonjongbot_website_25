@@ -52,7 +52,7 @@ TAGEbuilder uses a YAML configuration file to define predictor parameters. This 
 
 Below is an example predictor spec with one base bimodal predictor and 4 tagged predictors.
 
-```yaml
+```python
 global_config:
     phist_len: 16
     u_duration_log: 19
@@ -114,7 +114,7 @@ TAGEbuilder produces several outputs:
 
 ![per class stat](https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_PER_CLASS_STAT.png "=700x")
 
-![per addr stat](https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/LOT_TOP_N_ADDR.png "=700x")
+![per addr stat](https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_TOP_N_ADDR.png "=700x")
 
 ![per addr stat](https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_TOP_N_SUM.png "=700x")
 
