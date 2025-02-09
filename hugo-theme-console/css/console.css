@@ -408,3 +408,11 @@ figure {
 h1::after{
     z-index: -1;
 }
+
+.img-responsive{
+    width: 100%;
+}
+/* 
+img{
+    width: 100%;
+} */
