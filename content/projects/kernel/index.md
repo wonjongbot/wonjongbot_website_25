@@ -58,7 +58,7 @@ The file system is **read-only** and has a total size of **8MB**, organized into
 - Thus the file system supports a **maximum of 62 files**, each with a maximum **size of 4092KB** and a **filename limit of 32 characters**.
 - The file system is **flat** (non-hierarchical) and **does not support writing or modifications**.
 
-### Exception/Exception Handlers
+### Exception and Exception Handlers
 
 An exception occurs when a user program (or worse, the kernel) attempts an illegal or undefined operation (e.g., division by zero, accessing invalid memory). However, an exception is not necessarily "unexpected"; it simply means execution has deviated from the normal control flow.
 
@@ -68,7 +68,7 @@ The exception handler typically logs an error message and debugging information.
 
 If an exception occurs in **kernel mode**, it is considered fatal and non-recoverable. In this case, the kernel halts execution, requiring a system reboot.
 
-### Interrupt/Interrupt Handlers
+### Interrupt and Interrupt Handlers
 
 An interrupt occurs when a hardware device requires the processor’s attention, such as keyboard input, the Real-Time Clock (RTC), or the Programmable Interrupt Controller (PIC). From the kernel’s perspective, interrupts are **unexpected and unpredictable** since they can occur at any time (and typically unrelated) relative to program execution.
 
@@ -82,7 +82,7 @@ The interrupt assembly linkage **saves the processor state**, then invokes the u
 
 The interrupt handler identifies the source of the interrupt and calls the appropriate device driver, which then performs the necessary processing before execution resumes (see [Supported Devices and Drivers](#supported-devices-and-drivers)).
 
-### Supported Devices/Drivers
+### Supported Devices and Drivers
 
 The kernel includes drivers for the **keyboard, Programmable Interval Timer (PIT), Real-Time Clock (RTC), and terminal**.
 
@@ -202,7 +202,7 @@ When switching between processes, the **kernel saves the current process's hardw
 4. **Restore the next process state** – Registers and stack are restored from the saved context.
 5. **Resume execution** – The kernel returns to the system linkage (see [Context Switching and Assembly Linkages](#context-switching-and-assembly-linkages)).
 
-### Background Switching/Multiterminals
+### Background Switching and Multiterminals
 
 As mentioned above, the OS supports **up to three active terminals**, each maintaining information about the **currently running process**, **PCB pointer**, and **screen state**. The **scheduler relies on this information** to manage process execution correctly.
 
