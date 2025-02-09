@@ -83,6 +83,15 @@
     }
 }
 
+@media only screen and (min-width: 851px) {
+    :root {
+        --global-font-size: 14px;
+        --global-font-color: #444;
+        --global-line-height: 1.6em;
+        --page-width: 60em;
+    }
+}
+
 .sidebar-heading {
     text-transform: none;
     letter-spacing: 0;
