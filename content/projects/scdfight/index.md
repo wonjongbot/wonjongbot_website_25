@@ -11,7 +11,7 @@ demo = 'https://youtu.be/uepAv-EOpGw?si=4zYYmHreWtNYOQfy'
 Multiplayer arcade game hardware designed on an FPGA.
 <!--more-->
 
-![Front Image](https://raw.githubusercontent.com/wonjongbot/final_project/main/giffront.gif)
+{{< add-img "https://raw.githubusercontent.com/wonjongbot/final_project/main/giffront.gif" "75%" >}}
 
 _The final version of the game has physics accurate reflection mechanics_
 

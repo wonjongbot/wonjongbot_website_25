@@ -106,18 +106,24 @@ _check `tageBuilder/docs/example_sim_output.tar.gz` for output example._
 TAGEbuilder produces several outputs:
 - Visualizations for memory usage by predictor components
 
-![storage plot](https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_STORAGE.png "=700x")
+{{< add-img "https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_STORAGE.png" "100%" >}}
+<!-- ![storage plot](https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_STORAGE.png "width=700x") -->
 
 - Graphs for MPKI and accuracy
-![overall MPKI and Accuracy](https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_OVERALL_MPKI_ACCURCY.png "=700x")
+
+{{< add-img "https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_OVERALL_MPKI_ACCURCY.png" "100%" >}}
+<!-- ![overall MPKI and Accuracy](https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_OVERALL_MPKI_ACCURCY.png "=700x") -->
 
 - Statistics on mispredictions per branch PC and branch class analysis
 
-![per class stat](https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_PER_CLASS_STAT.png "=700x")
+{{< add-img "https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_PER_CLASS_STAT.png" "100%" >}}
+<!-- ![per class stat](https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_PER_CLASS_STAT.png "=700x") -->
 
-![per addr stat](https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_TOP_N_ADDR.png "=700x")
+{{< add-img "https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_TOP_N_ADDR.png" "100%" >}}
+<!-- ![per addr stat](https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_TOP_N_ADDR.png "=700x") -->
 
-![per addr stat](https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_TOP_N_SUM.png "=700x")
+{{< add-img "https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_TOP_N_SUM.png" "100%" >}}
+<!-- ![per addr stat](https://raw.githubusercontent.com/wonjongbot/tageBuilder/refs/heads/master/docs/img/PLOT_TOP_N_SUM.png "=700x") -->
 
 - CSV files summarizing simulation results (per predictor, per branch PC address, general MPKI/accuracy)
 

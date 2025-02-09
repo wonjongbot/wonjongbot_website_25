@@ -12,7 +12,7 @@ ECE 391 final MP. Unix like kernel w/ vmem, syscall, multithreading and more.
 ---
 
 <!-- ![os_gif](os_large.gif) -->
-{{< add-img "os_large.gif" "512px" >}}
+{{< add-img "os_cropped.gif" "70%" >}}
 ## Technical Overview
 
 Contents
