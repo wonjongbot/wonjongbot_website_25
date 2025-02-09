@@ -130,3 +130,15 @@ _currently adding more details_
 ## Applications
 
 Primary application is to aid high performance CPU design with fast branch predictor prototyping.
+
+## Resources
+
+- [A case for (partially) TAgged GEometric history length branch prediction](https://jilp.org/vol8/v8paper1.pdf)
+
+- [Why TAGE is the best](https://comparch.net/2013/06/30/why-tage-is-the-best/)
+
+- [L-TAGE submission code to the 2nd CBP](https://www.irisa.fr/caps/projects/Architecture/L-TAGE.h)
+
+- [ craymichael/CBP-16-Simulation](https://github.com/craymichael/CBP-16-Simulation)
+
+- [UofWisco Advanced Branch Prediction Lecture](https://ece752.ece.wisc.edu/lect09-adv-branch-prediction.ppt)
