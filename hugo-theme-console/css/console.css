@@ -83,7 +83,7 @@
     }
 }
 
-@media only screen and (min-width: 851px) {
+@media only screen and (min-width: 850px) {
     :root {
         --global-font-size: 14px;
         --global-font-color: #444;
