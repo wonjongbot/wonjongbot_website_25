@@ -129,6 +129,11 @@ h1 {
     margin-bottom: 150px;
 }
 
+.content_body p{
+    margin-left: 1em;
+    /* text-indent: 1em; */
+}
+
 .content-column-content p,
 .content-column-content li {
     color: #666;
