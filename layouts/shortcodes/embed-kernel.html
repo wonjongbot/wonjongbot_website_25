@@ -6,9 +6,9 @@
     }
     #screen_container
     {
-        border: 2px solid #aaa;
-        padding: 20px;
-        margin: auto;
+        border: 2px dotted #aaa;
+        padding-top: 20px;
+        margin: 0px;
         width: 100%;
         text-align: center;
     }
@@ -18,7 +18,7 @@
         white-space: pre;
         font-family: "Web IBM VGA 8x16";
         font-style: normal;
-        /*font-size: -var(--global-font-size);*/
+        font-size: var(--qemu-font-size);
         line-height: 1em;
         margin:auto;
     }
@@ -48,7 +48,7 @@
 
     body
     {
-        min-width: 880px;
+        min-width: 100%;
     }
 </style>
 <script src="/kernel_demo/libv86.js"></script>
