@@ -32,6 +32,7 @@
 
 :root {
     --global-font-size: 16px;
+    --qemu_font-size: 21px;
     --global-font-color: #444;
     --mono-font-stack: Roboto Mono, Menlo, Monaco, Lucida Console,
         Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
@@ -77,6 +78,7 @@
 @media only screen and (max-width: 850px) {
     :root {
         --global-font-size: 14px;
+        --qemu-font-size:9px;
         --global-font-color: #444;
         --global-line-height: 1.6em;
         --page-width: 70em;
