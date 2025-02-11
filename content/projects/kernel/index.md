@@ -5,12 +5,14 @@ draft = false
 title = 'Unix like kernel'
 type = "post"
 github = 'https://github.com/wonjongbot/391OS'
+demo = './kernel'
 +++
 ECE 391 final MP. Unix like kernel w/ vmem, syscall, multithreading and more.
 
 <!--more-->
 ---
 {{< embed-kernel >}}
+
 <!-- ![os_gif](os_large.gif) -->
 <!-- {{< add-img "os_cropped.gif" "70%" >}} -->
 ## Technical Overview
