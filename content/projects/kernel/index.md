@@ -10,29 +10,32 @@ ECE 391 final MP. Unix like kernel w/ vmem, syscall, multithreading and more.
 
 <!--more-->
 ---
-
+{{< embed-kernel >}}
 <!-- ![os_gif](os_large.gif) -->
-{{< add-img "os_cropped.gif" "70%" >}}
+<!-- {{< add-img "os_cropped.gif" "70%" >}} -->
 ## Technical Overview
 
 Contents
 
-*   [Shell Commands](#shell-commands)
-*   [Shell Shortcut Keys](#shell-shortcut-keys)
-*   [File System](#file-system)
-*   [File System Abstraction](#file-system-abstraction)
-*   [File System Directory](#file-system-directory)
-*   [Context Switch and Assembly Linkages](#context-switch-and-assembly-linkages)
-*   [Exception and Exception Handlers](#exception-and-exception-handlers)
-*   [Interrupt and Interrupt Handlers](#interrupt-and-interrupt-handlers)
-*   [Supported Devices/Drivers](#supported-devicesdrivers)
-*   [Memory Addressing](#memory-addressing)
-*   [Physical Memory Layout](#physical-memory-layout)
-*   [Virtual Memory Layout](#virtual-memory-layout)
-*   [System Calls](#system-calls)
-*   [Process Control: Execute and Halt](#process-control-execute-and-halt)
-*   [Process Switching: Scheduler](#process-switching-scheduler)
-*   [Background Switching and Multiterminals](#background-switching-and-multiterminals)
+- [Technical Overview](#technical-overview)
+  - [Shell Commands](#shell-commands)
+  - [Shell Shortcut Keys](#shell-shortcut-keys)
+  - [File System](#file-system)
+  - [Exception and Exception Handlers](#exception-and-exception-handlers)
+  - [Interrupt and Interrupt Handlers](#interrupt-and-interrupt-handlers)
+  - [Supported Devices and Drivers](#supported-devices-and-drivers)
+  - [Memory Addressing](#memory-addressing)
+  - [Physical Memory Layout](#physical-memory-layout)
+  - [Virtual Memory Layout](#virtual-memory-layout)
+  - [System Calls](#system-calls)
+  - [Process Control/Execute/Halt](#process-controlexecutehalt)
+    - [Process Creation: Execute System Call](#process-creation-execute-system-call)
+    - [Process Termination: Halt System Call](#process-termination-halt-system-call)
+  - [Process Switching/Scheduler](#process-switchingscheduler)
+    - [Process Switching Mechanism](#process-switching-mechanism)
+  - [Background Switching and Multiterminals](#background-switching-and-multiterminals)
+    - [Handling Background Process Switching](#handling-background-process-switching)
+    - [Handling Active Process Switching](#handling-active-process-switching)
 
 ### Shell Commands
 
