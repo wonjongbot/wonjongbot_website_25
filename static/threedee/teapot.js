@@ -1,6 +1,7 @@
 // teapot.js
 import * as THREE from "three";
 import { TeapotGeometry } from "three/examples/jsm/geometries/TeapotGeometry.js";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 /**
  * Spawns a teapot 3D scene into the given container.
@@ -16,6 +17,7 @@ export function spawnTeapot(container, options = {}) {
   const baseSpeed = options.baseSpeed || 0.01;
   const hoverSpeed = options.hoverSpeed || 0.05;
   const cameraZ = options.cameraZ || 3;
+  const containerRoot = options.containerRoot || container;
 
   // Create scene, camera, and renderer.
   const scene = new THREE.Scene();
@@ -42,7 +44,7 @@ export function spawnTeapot(container, options = {}) {
   ];
   const loader = new THREE.CubeTextureLoader();
   const cubemap = loader.load(cubemapUrls);
-//   scene.background = cubemap;
+  // scene.background = cubemap;
 
   // Create a glossy material that uses the cubemap for reflections.
   const material = new THREE.MeshStandardMaterial({
@@ -65,11 +67,18 @@ export function spawnTeapot(container, options = {}) {
   const teapotMesh = new THREE.Mesh(teapotGeometry, material);
   scene.add(teapotMesh);
 
-  // Add lighting to the scene.
-  scene.add(new THREE.AmbientLight(0xffffff, 0.3));
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-  directionalLight.position.set(5, 10, 7.5);
-  scene.add(directionalLight);
+  // // Add lighting to the scene.
+  // scene.add(new THREE.AmbientLight(0xffffff, 0.3));
+  // const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+  // directionalLight.position.set(5, 10, 7.5);
+  // scene.add(directionalLight);
+
+  // // Set up OrbitControls.
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableZoom = false;
+  controls.enablePan = false;
+  controls.autoRotate = false; // start off disabled
+  controls.autoRotateSpeed = 6;
 
   // Set up animation loop with rotation speed control.
   let currentSpeed = baseSpeed;
@@ -77,18 +86,21 @@ export function spawnTeapot(container, options = {}) {
     requestAnimationFrame(animate);
     teapotMesh.rotation.x += currentSpeed;
     teapotMesh.rotation.y += currentSpeed;
+    controls.update();
     renderer.render(scene, camera);
   }
   animate();
 
   // Increase rotation speed when hovering over the container.
-  container.addEventListener("mouseenter", () => {
+  containerRoot.addEventListener("mouseenter", () => {
     scene.background = cubemap;
     currentSpeed = hoverSpeed;
+    controls.autoRotate = true;
   });
-  container.addEventListener("mouseleave", () => {
+  containerRoot.addEventListener("mouseleave", () => {
     scene.background = 0x0;
     currentSpeed = baseSpeed;
+    controls.autoRotate = false;
   });
 
   // Return an object in case you want to control the scene later.
