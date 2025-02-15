@@ -424,3 +424,15 @@ h1::after{
 img{
     width: 100%;
 } */
+
+#teapot-preview {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    pointer-events: none;
+    /* Adjust width and height for a larger canvas */
+    /* width: 250px;
+    height: 250px; */
+    border: 1px solid #ddd;
+    background: #fff;
+  }

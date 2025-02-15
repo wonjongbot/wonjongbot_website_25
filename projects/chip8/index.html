@@ -4,11 +4,12 @@
         "imports": {
           "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
           "three/examples/jsm/geometries/TeapotGeometry.js": "https://unpkg.com/three@0.152.2/examples/jsm/geometries/TeapotGeometry.js",
+          "three/examples/jsm/controls/OrbitControls.js": "https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js",
           "teapot": "/threedee/teapot.js"
         }
       }
-    </script></head><body class=terminal><div class=container><div class=terminal-nav><header class=terminal-logo><div class="logo terminal-prompt" style=display:flex;align-items:center><a href=https://wonjongbot.com/ style=margin-right:4px><div id=teapot-container></div></a><a href=https://wonjongbot.com/ class="no-style site-name">wonjongbot</a>:~#
-<a href=https://wonjongbot.com/projects>projects</a>/<a href=https://wonjongbot.com/projects/chip8>chip8</a>/</div></header><nav class=terminal-menu><ul vocab="https://schema.org/" typeof="BreadcrumbList"><li><a href=https://wonjongbot.com/ typeof="ListItem">home/</a></li><li><a href=https://wonjongbot.com/posts/ typeof="ListItem">posts/</a></li><li><a href=https://wonjongbot.com/projects/ typeof="ListItem">projects/</a></li><li><a href=https://wonjongbot.com/cv/ typeof="ListItem">cv/</a></li></ul></nav></div></div><div class="container animated zoomIn fast"><h1>chip8</h1><div class=content_body><p>8-bit cpu simulator in c++.</p><h1 id=chip-8-emulator>CHIP-8 Emulator</h1><p>CHIP-8 emulator inspired by <a href=https://austinmorlan.com/posts/chip8_emulator/>Austin Morlan&rsquo;s CHIP-8 emulator</a>.</p><p>A takeaway from this project:</p><ul><li><p>Always check datatypes and how much data they can store</p><p><code>uint8_t</code> only stores 8 bits, so when I did</p><div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#078;font-weight:700>uint8_t</span> x <span style=color:#555>=</span> opcode <span style=color:#555>&amp;</span> <span style=color:#f60>0x0F00u</span>;
+    </script></head><body class=terminal><div class=container><div class=terminal-nav><header class=terminal-logo><div class="logo terminal-prompt" style=display:flex;align-items:center><a style=margin-right:4px><div id=teapot-container></div></a><a href=https://wonjongbot.com/ class="no-style site-name">wonjongbot</a>:~#
+<a href=https://wonjongbot.com/projects>projects</a>/<a href=https://wonjongbot.com/projects/chip8>chip8</a>/</div></header><nav class=terminal-menu><ul vocab="https://schema.org/" typeof="BreadcrumbList"><li><a href=https://wonjongbot.com/ typeof="ListItem">home/</a></li><li><a href=https://wonjongbot.com/posts/ typeof="ListItem">posts/</a></li><li><a href=https://wonjongbot.com/projects/ typeof="ListItem">projects/</a></li><li><a href=https://wonjongbot.com/cv/ typeof="ListItem">cv/</a></li></ul></nav></div></div><div id=teapot-preview></div><div class="container animated zoomIn fast"><h1>chip8</h1><div class=content_body><p>8-bit cpu simulator in c++.</p><h1 id=chip-8-emulator>CHIP-8 Emulator</h1><p>CHIP-8 emulator inspired by <a href=https://austinmorlan.com/posts/chip8_emulator/>Austin Morlan&rsquo;s CHIP-8 emulator</a>.</p><p>A takeaway from this project:</p><ul><li><p>Always check datatypes and how much data they can store</p><p><code>uint8_t</code> only stores 8 bits, so when I did</p><div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#078;font-weight:700>uint8_t</span> x <span style=color:#555>=</span> opcode <span style=color:#555>&amp;</span> <span style=color:#f60>0x0F00u</span>;
 </span></span><span style=display:flex><span>x <span style=color:#555>=</span> x  <span style=color:#555>&gt;&gt;</span> <span style=color:#f60>8u</span>;
 </span></span></code></pre></div><p><code>x</code> ends up only storing 0 since it can only save the first byte. Hence, the variable&rsquo;s datatype should be bigger than 8 bits or do all of operation in one line like below</p><div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#078;font-weight:700>uint8_t</span> x <span style=color:#555>=</span> (opcode <span style=color:#555>&amp;</span> <span style=color:#f60>0x0F00u</span>) <span style=color:#555>&gt;&gt;</span> <span style=color:#f60>8u</span>;
 </span></span></code></pre></div></li></ul><div><img src=https://raw.githubusercontent.com/wonjongbot/CHIP-8/master/images/tetris.png width=100%></img></div><h2 id=usage>Usage</h2><p>Required library: SDL2</p><p>Use makefile within source directory to build the emulator</p><pre tabindex=0><code class=language-command data-lang=command>cd source
@@ -25,7 +26,41 @@ make
       teapotSize: 0.8,
       tessellation: 10,
       baseSpeed: 0.01,
-      hoverSpeed: 0.05,
+      hoverSpeed: 0.03,
       cameraZ: 3,
     });
+
+    const previewContainer = document.getElementById("teapot-preview");
+    let previewSceneInstance = null;
+
+    previewSceneInstance = spawnTeapot(previewContainer, {
+          containerSize: 250,
+          teapotSize: 0.8,
+          tessellation: 10,
+          baseSpeed: 0.01,
+          hoverSpeed: 0.03,
+          cameraZ: 3,
+          containerRoot: container
+    });
+
+      
+      document.addEventListener("DOMContentLoaded", () => {
+        const teapot = document.getElementById("teapot-container")
+        const tp_preview_mover = document.getElementById("teapot-preview-mover")
+
+        teapot.addEventListener("mouseenter", () => {
+          
+          previewContainer.style.display = "block";
+        });
+
+        teapot.addEventListener("mousemove", e => {
+          
+          previewContainer.style.top = (e.pageY + 10) + "px";
+          previewContainer.style.left = (e.pageX + 10) + "px";
+        });
+
+        teapot.addEventListener("mouseleave", () => {
+          previewContainer.style.display = "none";
+        });
+      });
   </script></html>
