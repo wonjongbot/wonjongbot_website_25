@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Spawn Teapot Example</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      /* Example container for the teapot */
+      #teapot-container {
+        width: 150px;
+        height: 150px;
+        margin: 20px;
+      }
+    </style>
+
+    <!-- Import Map to define module specifiers -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+          "three/examples/jsm/geometries/TeapotGeometry.js": "https://unpkg.com/three@0.152.2/examples/jsm/geometries/TeapotGeometry.js",
+          "teapot": "./teapot.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>My Website Title</h1>
+    <!-- Container where the teapot will be spawned -->
+    <div id="teapot-container"></div>
+
+    <!-- Main script to spawn the teapot -->
+    <script type="module">
+      import { spawnTeapot } from "teapot";
+
+      // Get the container and spawn the teapot into it.
+      const container = document.getElementById("teapot-container");
+      spawnTeapot(container, {
+        containerSize: 150,
+        teapotSize: 0.8,
+        tessellation: 10,
+        baseSpeed: 0.01,
+        hoverSpeed: 0.05,
+        cameraZ: 3,
+      });
+    </script>
+  </body>
+</html>
